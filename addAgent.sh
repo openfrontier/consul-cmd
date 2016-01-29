@@ -8,5 +8,4 @@ consul agent \
     -client=${BIND_IP} \
     -data-dir="/tmp/consul" \
     -retry-join=${JOIN_IP} \
-    -server \
     -ui
