@@ -4,9 +4,8 @@ set -e
 BIND_IP=$1
 JOIN_IP=$2
 consul agent \
-    -advertise=${BIND_IP} \
-    -client=0.0.0.0 \
+    -bind=${BIND_IP} \
     -data-dir="/tmp/consul" \
-    -join ${JOIN_IP} \
+    -retry-join ${JOIN_IP} \
     -server \
     -ui
